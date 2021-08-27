@@ -5,9 +5,10 @@ import { signIn } from '../../services/auth';
 import AuthContext from '../../contexts/auth';
 
 const SignIn: React.FC = () => {
-  const { signed, signIn } = useContext(AuthContext);
+  const { signed, signIn, user } = useContext(AuthContext);
 
   console.log(signed)
+  console.log(user)
 
   async function handleSign(){
     signIn()
